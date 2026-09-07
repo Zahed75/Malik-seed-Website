@@ -60,7 +60,7 @@ export const potatoSeedData = {
     ],
   },
   youtube: {
-    title: "Serving 3 sectors: 1. Table, Processing, & 3. Export",
+    title: "Serving 3 sectors: 1. Table, 2. Processing, & 3. Export",
     youtubeUrl: "https://www.youtube.com/@malikseeds",
     images: ["/images/brand/dscf7469_1.png", "/images/brand/dscf7450_1.png"],
     brandLogo: "/images/brand/agrico_potato_1.png",
