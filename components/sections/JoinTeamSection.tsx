@@ -57,7 +57,7 @@ export default async function JoinTeamSection({ apiData: initialApiData }: JoinT
               <SectionBadge
                 variant="outline"
                 showDot
-                dotPosition="right"
+                dotPosition="left"
                 dotSize="6px"
                 className="h-[30px] px-4 normal-case text-[12px] leading-[18px] xl:h-[33px] xl:text-[14px]"
               >
