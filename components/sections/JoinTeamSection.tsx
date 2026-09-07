@@ -55,7 +55,7 @@ export default async function JoinTeamSection({ apiData: initialApiData }: JoinT
             <div className="flex min-w-0 w-full max-w-[310px] shrink-0 flex-col items-start justify-between gap-[24px] md:max-w-[448px] lg:max-w-[528px] xl:absolute xl:top-[95px] xl:left-[60px] xl:h-[301px] xl:w-[403px] xl:max-w-none xl:px-0 xl:py-0">
               {/* Badge — Figma: 141x30, radius 30px, dot on right (Frame 2147229487) */}
               <SectionBadge
-                variant="dark"
+                variant="outline"
                 showDot
                 dotPosition="left"
                 dotSize="6px"
