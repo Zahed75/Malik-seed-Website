@@ -339,25 +339,25 @@ export default function AboutSection({ apiData }: AboutSectionProps) {
               {/* Frame 35 — 358x160, gap 16 */}
               <div className="flex flex-row gap-4">
                 {/* Frame 33 — 171x160 */}
-                <div className="relative h-40 flex-1 rounded-2xl overflow-hidden">
+                <div className="relative h-40 flex-1 rounded-[16px] overflow-hidden">
                   <OptimizedImage
                     src={aboutData.images.about1Mobile}
                     alt="Years of Experience"
                     fill
                     sizes="171px"
                     quality={50}
-                    className="object-contain"
+                    className="object-cover"
                   />
                 </div>
                 {/* Frame 34 — 171x160 */}
-                <div className="relative h-40 flex-1 rounded-2xl overflow-hidden">
+                <div className="relative h-40 flex-1 rounded-[16px] overflow-hidden">
                   <OptimizedImage
                     src={aboutData.images.about2Mobile}
                     alt="Farmer Partners"
                     fill
                     sizes="171px"
                     quality={50}
-                    className="object-contain"
+                    className="object-cover"
                   />
                 </div>
               </div>
