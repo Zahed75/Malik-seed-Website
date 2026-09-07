@@ -27,11 +27,11 @@ export default async function JoinTeamSection({ apiData: initialApiData }: JoinT
 
   const banner = Array.isArray(apiData) && apiData.length > 0 ? apiData[0] : null;
   const joinTeamData = {
-    badge: banner?.title || "Join our Team",
-    title: banner?.subtitle || "Shape the Future of Agriculture with Malik Seeds",
+    badge: banner?.title || "",
+    title: banner?.subtitle || "",
     cta: {
-      label: banner?.cta_text || "Learn More",
-      href: banner?.cta_link || "/careers",
+      label: banner?.cta_text || "",
+      href: banner?.cta_link || "",
     },
     images: {
       desktop: resolveImageUrl(banner?.background_image),
@@ -55,7 +55,6 @@ export default async function JoinTeamSection({ apiData: initialApiData }: JoinT
             <div className="flex min-w-0 w-full max-w-[310px] shrink-0 flex-col items-start justify-between gap-[24px] md:max-w-[448px] lg:max-w-[528px] xl:absolute xl:top-[95px] xl:left-[60px] xl:h-[301px] xl:w-[403px] xl:max-w-none xl:px-0 xl:py-0">
               {/* Badge — Figma: 141x30, radius 30px, dot on right (Frame 2147229487) */}
               <SectionBadge
-                variant="outline"
                 showDot
                 dotPosition="left"
                 dotSize="6px"
@@ -75,14 +74,12 @@ export default async function JoinTeamSection({ apiData: initialApiData }: JoinT
                       fontWeight: 500,
                     }}
                   >
-                    {titleText.includes("\n") ? (
-                      titleText.split("\n").map((line, idx) => (
-                        <Fragment key={idx}>
-                          {idx > 0 && <br />}
-                          {line}
-                        </Fragment>
-                      ))
-                    ) : ''}
+                    {titleText.split("\n").map((line, idx) => (
+                      <Fragment key={idx}>
+                        {idx > 0 && <br />}
+                        {line}
+                      </Fragment>
+                    ))}
                   </h2>
                 </div>
 
