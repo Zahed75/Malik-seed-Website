@@ -238,11 +238,11 @@ export default function ContactHeroSection({
                   <div className="relative inline-flex flex-col items-start gap-2.5">
                     {/* Malik Seeds Ltd. Title — Figma: 30px (desktop) / 28px (mobile) */}
                     <div className="text-card-title text-brand-dark font-medium tracking-tight">
-                      {OFFICE_DETAILS.companyName}
+                      {info?.title}
                     </div>
                     {/* Address Text — Figma: 16px */}
                     <p className="text-brand-dark text-[16px] leading-[1.25] font-normal opacity-90">
-                      {info?.address || OFFICE_DETAILS.address}
+                      {info?.address}
                     </p>
                   </div>
 
@@ -260,14 +260,14 @@ export default function ContactHeroSection({
                         />
                       </div>
                       <a
-                        href={`tel:${info?.phone_primary || OFFICE_DETAILS.phone.href.replace("tel:", "")}`}
+                        href={`tel:${info?.phone_primary}`}
                         className="text-brand-dark text-[16px] leading-[19.2px] font-normal hover:underline focus:outline-none inline-flex flex-wrap items-center gap-x-1.5"
                       >
                         <span className="opacity-80">
                           {OFFICE_DETAILS.phone.label}
                         </span>
                         <span className="font-medium">
-                          {info?.phone_primary || OFFICE_DETAILS.phone.value}
+                          {info?.phone_primary }
                         </span>
                       </a>
                     </div>
@@ -291,7 +291,7 @@ export default function ContactHeroSection({
                           {OFFICE_DETAILS.email.label}
                         </span>
                         <span className="font-medium">
-                          {info?.email_primary || OFFICE_DETAILS.email.value}
+                          {info?.email_primary}
                         </span>
                       </a>
                     </div>
