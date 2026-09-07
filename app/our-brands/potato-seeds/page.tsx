@@ -75,7 +75,7 @@ export default async function PotatoSeedPage() {
       <BrandHero {...resolvedHero} />
       <BrandIntro {...resolvedIntro} />
       <BrandGrid {...resolvedGrid} />
-      {resolvedSplit.image ? <BrandSplit {...resolvedSplit} /> : null}
+      {resolvedSplit.image ? <BrandSplit {...resolvedSplit} imageClassName="h-[391px]" /> : null}
       <BrandCards {...potatoSeedData.cards} showIndex={false} />
       <BrandYouTube {...resolvedYoutube} />
     </div>

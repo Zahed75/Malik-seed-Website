@@ -33,8 +33,8 @@ const NewsCard = memo(function NewsCard({ article }: NewsCardProps) {
         }
       }}
     >
-      <article className="border-brand-border-light bg-brand-neutral-light flex h-[434px] w-[330px] flex-col overflow-hidden rounded-[24px] border transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md xl:h-[488px] xl:w-[361px]">
-        <div className="relative h-[256px] w-full overflow-hidden bg-neutral-100 xl:h-[264px]">
+      <article className="bg-brand-neutral-light flex h-auto w-[358px] flex-col overflow-hidden rounded-[24px] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md xl:h-[488px] xl:w-[361px]">
+        <div className="relative h-[264px] w-full overflow-hidden rounded-[24px] bg-neutral-100">
           <OptimizedImage
             src={article.image}
             alt={article.title}
@@ -45,21 +45,21 @@ const NewsCard = memo(function NewsCard({ article }: NewsCardProps) {
           />
         </div>
 
-        <div className="flex flex-1 flex-col justify-between p-4 pb-8 xl:p-6 xl:pb-8">
-          <div className="flex h-[26px] items-center gap-3 xl:h-[29px]">
-            <span className="font-inter text-brand-dark/60 text-[12px] leading-normal xl:text-[14px]">
+        <div className="flex flex-1 flex-col gap-6 px-6 pt-6 pb-8">
+          <div className="flex items-center gap-4">
+            <span className="font-inter text-brand-dark/70 text-[14px] leading-[21px]">
               {article.date}
             </span>
             {article.category && (
               <>
-                <span className="text-brand-dark/40 text-sm">•</span>
-                <div className="border-brand-border bg-brand-bg text-brand-active inline-flex h-[26px] items-center justify-center rounded-[8px] border px-3 text-[12px] font-medium xl:h-[29px] xl:px-4 xl:text-[14px]">
+                <span className="text-brand-dark/70 text-sm">•</span>
+                <div className="border-brand-border bg-brand-bg text-brand-active inline-flex items-center justify-center rounded-[8px] border px-4 py-1 text-[14px] leading-[21px]">
                   {article.category}
                 </div>
               </>
             )}
           </div>
-          <h3 className="text-brand-dark line-clamp-3 font-sans text-[20px] leading-[24px] font-medium xl:text-[24px] xl:leading-[29px]">
+          <h3 className="text-brand-dark line-clamp-3 font-sans text-[24px] leading-[29px] font-medium">
             {article.title}
           </h3>
         </div>

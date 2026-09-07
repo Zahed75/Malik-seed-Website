@@ -15,6 +15,7 @@ interface BrandSplitProps {
   statCard?: StatCard;
   bottomHighlight?: string;
   image?: string;
+  imageClassName?: string;
   bgTheme?: "dark" | "light";
   layout?: "split" | "centered";
 }
@@ -27,6 +28,7 @@ export default function BrandSplit({
   statCard,
   bottomHighlight,
   image,
+  imageClassName,
   bgTheme = "light",
   layout = "split",
 }: BrandSplitProps) {
@@ -215,7 +217,7 @@ export default function BrandSplit({
 
         {/* Right: Image */}
         {image && (
-          <div className="relative h-[220px] w-full shrink-0 overflow-hidden rounded-[20px] bg-neutral-200 lg:h-[530px] lg:max-w-[503px] lg:rounded-[24px]">
+          <div className={cn("relative h-[220px] w-full shrink-0 overflow-hidden rounded-[20px] bg-neutral-200 lg:h-[530px] lg:max-w-[503px] lg:rounded-[24px]", imageClassName)}>
             <OptimizedImage
               src={image}
               alt={title}

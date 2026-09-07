@@ -174,7 +174,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                 aria-hidden="true"
                 width={24}
                 height={24}
-                className="rotate-180 transition-transform duration-300 group-hover:-translate-x-1"
+                className="transition-transform duration-300 group-hover:-translate-x-1"
               />
               <span>Back to News</span>
             </Link>
