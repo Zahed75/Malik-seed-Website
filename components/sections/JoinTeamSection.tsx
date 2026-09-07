@@ -39,7 +39,7 @@ export default async function JoinTeamSection({ apiData: initialApiData }: JoinT
     },
   };
 
-  const titleText = joinTeamData.title || "Shape the Future of Agriculture with Malik Seeds";
+  const titleText = joinTeamData.title;
 
   return (
     // Desktop: 1440x690, bg #F2F7F1 (Figma: Frame 2147229633)
@@ -82,15 +82,7 @@ export default async function JoinTeamSection({ apiData: initialApiData }: JoinT
                           {line}
                         </Fragment>
                       ))
-                    ) : titleText === "Shape the Future of Agriculture with Malik Seeds" ? (
-                      <>
-                        Shape the <br className="inline xl:hidden" />
-                        Future of Agriculture <br className="inline xl:hidden" />
-                        with Malik Seeds
-                      </>
-                    ) : (
-                      titleText
-                    )}
+                    ) : ''}
                   </h2>
                 </div>
 

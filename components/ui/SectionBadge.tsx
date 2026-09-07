@@ -67,10 +67,11 @@ export function SectionBadge({
   return (
     <div
       className={cn(
-        "inline-flex h-[33px] w-fit items-center justify-center gap-2 rounded-[30px] px-4 uppercase",
+        "inline-flex h-[33px] w-fit items-center justify-center gap-2 rounded-[30px] px-4",
         "text-[12px] leading-[21px] font-medium md:text-[14px]",
         badgeVariants[variant],
-        className
+        className,
+        "uppercase"
       )}
       style={{ fontFamily: "var(--font-inter)" }}
     >
