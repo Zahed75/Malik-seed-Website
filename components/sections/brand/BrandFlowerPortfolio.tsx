@@ -137,7 +137,7 @@ export default function BrandFlowerPortfolio({
         {/* Tab Content Display */}
         <div className="mt-4 flex items-center justify-center">
           <div className="w-full shrink-0 lg:w-[790px]">
-            <div className="group relative h-[360px] w-full overflow-hidden rounded-[20px] border border-white/10 bg-neutral-900 lg:h-[475px] lg:rounded-[24px]">
+            <div className="group relative aspect-square h-auto w-full overflow-hidden rounded-[20px] border border-white/10 bg-neutral-900 md:aspect-auto md:h-[360px] lg:h-[475px] lg:rounded-[24px]">
               {segments.map((seg) => {
                 const isSelected = seg.id === activeTab;
                 return (
