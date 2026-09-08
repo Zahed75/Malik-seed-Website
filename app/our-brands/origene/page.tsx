@@ -122,7 +122,7 @@ export default async function OrigenePage() {
 
           {/* Right Column: Image */}
           {resolvedSplit1.image ? (
-            <div className="relative h-55 w-full shrink-0 overflow-hidden rounded-[20px] bg-neutral-200 lg:h-178.5 lg:max-w-152 lg:rounded-[24px]">
+            <div className="relative mx-auto aspect-square w-full max-w-[363px] shrink-0 overflow-hidden rounded-[20px] bg-neutral-200 md:max-w-none lg:mx-0 lg:aspect-auto lg:h-178.5 lg:max-w-152 lg:rounded-[24px]">
               <OptimizedImage
                 src={resolvedSplit1.image}
                 alt={origeneData.split1.title.join(" ").replace(/\n/g, "")}

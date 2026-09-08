@@ -172,7 +172,7 @@ export default async function MaliksFarmPage() {
   }
 
   const resolvedCropPortfolio = {
-    title: (dynamicData as any)?.cropPortfolio?.title || "",
+    title: maliksFarmData.cropPortfolio.title,
     description: (dynamicData as any)?.cropPortfolio?.description || "",
     groups: resolvedGroups && resolvedGroups.length > 0 ? resolvedGroups : undefined,
   };
@@ -186,7 +186,7 @@ export default async function MaliksFarmPage() {
       <BrandIntro {...resolvedIntro} />
 
       {/* 3. Custom Brand Split 1 (The Farm) */}
-      <section className="w-full bg-[#F2F7F1] px-4 py-12 md:px-8 md:py-16 lg:px-[100px] lg:py-[100px]">
+      <section className="w-full bg-[#F2F7F1]  px-4 py-12 md:px-8 md:py-16 lg:px-[100px] lg:py-[100px]">
         <div className="mx-auto flex max-w-[1240px] flex-col items-center gap-8 lg:gap-[64px]">
           {/* Left: Text */}
           <div className="flex max-w-[863px] shrink-0 flex-col items-center justify-center gap-6">
@@ -344,6 +344,9 @@ export default async function MaliksFarmPage() {
         </div>
       </section>
 
+      {/* Brand Crop Portfolio Section */}
+      <BrandCropPortfolio {...resolvedCropPortfolio} />
+
       {/* Commercial Farming Gallery Row */}
       {resolvedSplit2.gallery.length > 0 && (
         <section className="w-full bg-[#F2F7F1] px-4 pb-[80px] md:px-8 md:pb-[100px] lg:px-[100px]">
@@ -367,9 +370,6 @@ export default async function MaliksFarmPage() {
           </div>
         </section>
       )}
-
-      {/* Brand Crop Portfolio Section */}
-      <BrandCropPortfolio {...resolvedCropPortfolio} />
 
       {/* 6. Training Centre, Facilities & Testimonials */}
       <BrandTraining
