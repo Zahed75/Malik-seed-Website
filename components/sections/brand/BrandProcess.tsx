@@ -53,7 +53,7 @@ export default function BrandProcess({
       <div className="mx-auto flex max-w-[1240px] flex-col items-center gap-8 md:gap-16">
         {/* Header */}
         <div className="flex w-full max-w-[900px] flex-col items-center justify-center gap-6 text-center">
-          <SectionBadge variant="outline" showDot dotPosition={is2x2 ? "right" : "left"}>
+          <SectionBadge variant="outline" showDot>
             {badge}
           </SectionBadge>
           <div className="flex flex-col gap-2 md:gap-3">

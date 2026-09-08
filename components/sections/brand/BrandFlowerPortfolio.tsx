@@ -114,7 +114,7 @@ export default function BrandFlowerPortfolio({
                   key={seg.id}
                   onClick={() => setActiveTab(seg.id)}
                   className={cn(
-                    "relative h-[39px] cursor-pointer rounded-[10px] px-4 py-[9px] font-sans text-[14px] leading-[21px] font-medium whitespace-nowrap transition-colors duration-300 ease-in-out md:h-[48px] md:px-4 md:py-3 md:text-[16px] md:leading-[24px]",
+                    "relative h-[39px] cursor-pointer rounded-[10px] px-4 py-[9px] font-sans text-[12px] leading-[21px] font-medium whitespace-nowrap transition-colors duration-300 ease-in-out md:h-[48px] md:px-4 md:py-3 md:text-[16px] md:leading-[24px]",
                     isActive
                       ? "text-[#0D1A14]"
                       : "text-[#F2F7F1] hover:bg-[#0D291C]/50"
