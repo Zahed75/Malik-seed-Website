@@ -5,6 +5,7 @@ import { memo } from "react";
 interface BrandHeroProps {
   title: string;
   bgImage: string;
+  mobileBgImage?: string;
 }
 
 const BrandHeroOverlays = memo(function HeroOverlays() {
@@ -25,7 +26,7 @@ const BrandHeroOverlays = memo(function HeroOverlays() {
   );
 });
 
-export default function BrandHero({ title, bgImage }: BrandHeroProps) {
+export default function BrandHero({ title, bgImage, mobileBgImage }: BrandHeroProps) {
   const lines = title.split("\n");
 
   return (
@@ -34,6 +35,7 @@ export default function BrandHero({ title, bgImage }: BrandHeroProps) {
       <div className="absolute inset-0 z-0 bg-[#0d1a14]">
         <OptimizedImage
           src={bgImage}
+          mobileSrc={mobileBgImage}
           alt={title.replace(/\n/g, " ")}
           fill
           priority

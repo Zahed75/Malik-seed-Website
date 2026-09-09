@@ -9,11 +9,13 @@ const loadedCache = new Set<string>();
 
 export interface OptimizedImageProps extends Omit<ImageProps, "src"> {
   src?: string | null;
+  mobileSrc?: string | null;
   fallbackSrc?: string;
 }
 
 export default function OptimizedImage({
   src,
+  mobileSrc,
   alt = "",
   fallbackSrc = "/not-found.png",
   className = "",
@@ -81,19 +83,24 @@ export default function OptimizedImage({
         </div>
       )}
 
-      <Image
-        {...props}
-        src={error ? fallbackSrc : resolvedSrc}
-        alt={alt}
-        onLoad={handleLoad}
-        placeholder={showPlaceholder}
-        blurDataURL={blurDataURL}
-        onError={handleError}
-        unoptimized={props.unoptimized ?? (isProxied || isSvg)}
-        className={`${className} transition-all duration-500 ${loading ? "opacity-0" : "opacity-100"
-          } ${isTouched ? "scale-105" : ""}`}
-        style={style}
-      />
+      <picture>
+        {mobileSrc && (
+          <source media="(max-width: 767px)" srcSet={resolveImageUrl(mobileSrc)} />
+        )}
+        <Image
+          {...props}
+          src={error ? fallbackSrc : resolvedSrc}
+          alt={alt}
+          onLoad={handleLoad}
+          placeholder={showPlaceholder}
+          blurDataURL={blurDataURL}
+          onError={handleError}
+          unoptimized={props.unoptimized ?? (isProxied || isSvg)}
+          className={`${className} transition-all duration-500 ${loading ? "opacity-0" : "opacity-100"
+            } ${isTouched ? "scale-105" : ""}`}
+          style={style}
+        />
+      </picture>
     </div>
   );
 }
