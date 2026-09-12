@@ -91,11 +91,15 @@ export default async function InnovationDevelopmentPage() {
     <div className="min-h-screen bg-[#F2F7F1]">
       <BrandHero {...resolvedHero} />
       <BrandIntro {...resolvedIntro} />
-      <BrandSplit {...resolvedSplit1} />
+      <BrandSplit {...resolvedSplit1} 
+      imageClassName="h-[260px]" 
+      />
       <BrandGrid {...resolvedGrid} />
       <BrandCards {...innovationDevelopmentData.cards} showIndex={false} />
       <BrandProjectsTable projects={resolvedProjects} />
-      <BrandSplit {...resolvedSplit2} />
+      <BrandSplit {...resolvedSplit2}
+      imageClassName="h-[260px]" 
+      />
     </div>
   );
 }

@@ -207,7 +207,7 @@ export default async function MaliksFarmPage() {
 
           {/* Right: Image */}
           {resolvedSplit1.image && (
-            <div className="group relative aspect-[16/9] w-full overflow-hidden rounded-[20px] bg-neutral-200 lg:rounded-[24px]">
+            <div className="group relative aspect-video w-full overflow-hidden rounded-[20px] bg-neutral-200 lg:rounded-[24px]">
               <OptimizedImage
                 src={resolvedSplit1.image}
                 alt={resolvedSplit1.title}
