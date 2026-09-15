@@ -13,7 +13,7 @@ import {
 import ActionButton from "@/components/ActionButton";
 import { hiringApi, mapApiPositionToJobPosition, getPageMetadata } from "@/lib/api";
 import { BenefitBadge } from "@/components/ui/BenefitBadge";
-import { resolveImageUrl, cleanHtml, isHtmlContent } from "@/lib/utils";
+import { cleanHtml, isHtmlContent } from "@/lib/utils";
 
 interface JobDetailsPageProps {
   params: Promise<{ id: string }>;
@@ -72,8 +72,8 @@ export async function generateMetadata({
   if (!position) {
     return getPageMetadata(`/careers/${id}`, { title: `Position Not Found - ${SITE_NAME}` }, { revalidate: 0, tags: ["careers", "seo"] });
   }
-
-  const cleanDescription = cleanHtml(position.description);
+  
+  const cleanDescription = position.description;
 
   const fallback: Metadata = {
     title: `${position.title} - ${SITE_NAME}`,
@@ -170,18 +170,18 @@ export default async function JobDetailsPage({ params }: JobDetailsPageProps) {
                     </span>
                   </div>
                 )}
-                <h1 className="font-inter-tight text-[38px] leading-[46px] font-medium tracking-tight text-[#141C24] lg:text-[64px] lg:leading-[77px]">
+                <h1 className="font-inter-tight text-[38px] leading-11.5 font-medium tracking-tight text-[#141C24] lg:text-[64px] lg:leading-[77px]">
                   {position.title}
                 </h1>
 
                 {position.salary && (
                   <div className="flex flex-col gap-2 md:items-center sm:flex-row sm:items-baseline sm:gap-4">
-                    <span className="font-inter-tight text-[24px] leading-[24px] font-semibold text-[#0D1A14]" style={{ fontFamily: "var(--font-inter-tight)" }}>
+                    <span className="font-inter-tight text-[24px] leading-6 font-semibold text-[#0D1A14]" style={{ fontFamily: "var(--font-inter-tight)" }}>
                       {position.salary}
                     </span>
-                      <span className="font-inter-tight text-[14px] leading-[24px] text-[#0D1A14] lg:text-[16px]" style={{ fontFamily: "var(--font-inter-tight)" }}>
+                      {/* <span className="font-inter-tight text-[14px] leading-[24px] text-[#0D1A14] lg:text-[16px]" style={{ fontFamily: "var(--font-inter-tight)" }}>
                         (On-target earnings; base + commission)
-                      </span>
+                      </span> */}
                   </div>
                 )}
               </div>
