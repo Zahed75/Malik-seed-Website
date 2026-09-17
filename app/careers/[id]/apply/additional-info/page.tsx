@@ -141,8 +141,15 @@ export default function AdditionalInfoPage() {
   };
 
   const validateFile = (file: File) => {
-    const validTypes = ["application/pdf"];
-    if (!validTypes.includes(file.type)) {
+    const validTypes = [
+      "application/pdf",
+      "application/msword",
+      "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    ];
+    const fileExtension = file.name.split(".").pop()?.toLowerCase();
+    const validExtensions = ["pdf", "doc", "docx"];
+
+    if (!validTypes.includes(file.type) && !validExtensions.includes(fileExtension || "")) {
       setError("Only PDF or DOCX/DOC files are accepted");
       return false;
     }
