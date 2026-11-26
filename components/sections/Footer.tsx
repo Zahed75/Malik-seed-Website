@@ -11,7 +11,7 @@ const TYPOGRAPHY = {
     "font-inter-tight text-[18px] md:text-[24px] font-medium leading-[27px] md:leading-[36px] text-white",
   link: "font-inter-tight text-[14px] md:text-[16px] leading-[21px] md:leading-[24px] text-white/60 transition-colors hover:text-brand-light-green transition-colors",
   label:
-    "font-inter-tight text-[16px] md:text-[18px] leading-[19px] md:leading-[22px] text-white font-normal",
+    "font-inter-tight text-[16px] md:text-[18px] leading-[19px] md:leading-[22px] text-white/60 font-normal",
   contact:
     "font-inter-tight text-[14px] md:text-[16px] leading-[17px] md:leading-[19px] text-white font-medium hover:text-brand-light-green transition-colors",
 } as const;
