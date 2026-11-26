@@ -153,6 +153,10 @@ export default async function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        <meta
+          name="facebook-domain-verification"
+          content="4g7imh68l85o71tnv5vpxxueg0mmwz"
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `try{if(sessionStorage.getItem('hasSeenPremiumLoader')){document.documentElement.classList.add('has-seen-loader');}}catch(e){}`,
