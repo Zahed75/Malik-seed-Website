@@ -2,6 +2,7 @@ import Link from "next/link";
 import NextImage from "next/image";
 import Logo from "@/components/Logo";
 import { footerData, FooterLink, SocialLink } from "@/data/sections-data";
+import { OFFICE_DETAILS } from "@/data/pages-data";
 import { contactApi, homepageApi } from "@/lib/api";
 
 // Common Typography Classes for Scalability
@@ -142,6 +143,7 @@ export default async function Footer() {
   const phoneHref = contactInfo?.phone_primary ? `tel:${contactInfo.phone_primary}` : footerData.contact.phone.href;
   const emailLabel = contactInfo?.email_primary || footerData.contact.email.label;
   const emailHref = contactInfo?.email_primary ? `mailto:${contactInfo.email_primary}` : footerData.contact.email.href;
+  const address = contactInfo?.address || OFFICE_DETAILS.address;
 
   return (
     <footer
@@ -188,7 +190,11 @@ export default async function Footer() {
             </div>
 
             {/* Contact Information */}
-            <address className="flex w-full shrink-0 flex-col gap-6 not-italic md:gap-8 lg:mt-0 lg:w-54">
+            <address className="flex w-full shrink-0 flex-col gap-4 not-italic md:gap-6 lg:mt-0 lg:w-54">
+                <div className="flex flex-col gap-2 md:gap-4">
+                  <h4 className={TYPOGRAPHY.label}>Address</h4>
+                <p  className={TYPOGRAPHY.contact}>{address}</p>
+                </div>
               <div className="flex flex-col gap-2 md:gap-4">
                 <h4 className={TYPOGRAPHY.label}>Contact</h4>
                 <a
