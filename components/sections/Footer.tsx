@@ -196,7 +196,7 @@ export default async function Footer() {
                 <p  className={TYPOGRAPHY.contact}>{address}</p>
                 </div>
               <div className="flex flex-col gap-2 md:gap-4">
-                <h4 className={TYPOGRAPHY.label}>Contact</h4>
+                <h4 className={TYPOGRAPHY.label}>Phone</h4>
                 <a
                   href={phoneHref}
                   className={TYPOGRAPHY.contact}
